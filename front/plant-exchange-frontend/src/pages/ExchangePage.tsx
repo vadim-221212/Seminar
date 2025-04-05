@@ -22,7 +22,7 @@ const ExchangePage: React.FC = () => {
       return;
     }
 
-    axios.get('http://localhost:4006/api/exchanges', {
+    axios.get(`${import.meta.env.VITE_API_URL}/api/exchanges`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -34,8 +34,7 @@ const ExchangePage: React.FC = () => {
   const handleAccept = async (id: string) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.put(
-        `http://localhost:4006/api/exchanges/${id}/status`,
+      const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/exchanges/${id}/status`,
         { status: 'accepted' },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -48,8 +47,7 @@ const ExchangePage: React.FC = () => {
   const handleReject = async (id: string) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.put(
-        `http://localhost:4006/api/exchanges/${id}/status`,
+      const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/exchanges/${id}/status`,
         { status: 'rejected' },
         { headers: { Authorization: `Bearer ${token}` } }
       );

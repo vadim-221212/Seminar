@@ -69,14 +69,14 @@ export const getAuthState = (): AuthState => {
 // Функция для выполнения входа
 export const login = async (credentials: { email: string; password: string }) => {
   try {
-    const response = await axios.post('http://localhost:4006/api/auth/login', credentials);
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, credentials);
     const token = response.data.token;
 
     if (token) {
       setAuthToken(token);
 
       // Если сервер не возвращает user, можно запросить его отдельно
-      const userResponse = await axios.get('http://localhost:4006/api/auth/me', {
+      const userResponse = await axios.get(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -118,7 +118,7 @@ axios.interceptors.request.use((config) => {
 
   export const register = async (credentials: { username: string; email: string; password: string }) => {
     try {
-      const response = await axios.post('http://localhost:4006/api/auth/register', credentials);
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, credentials);
       console.log('Ответ сервера:', response.data); // Логируем ответ сервера
   
       if (response.data.message === 'User registered successfully') {

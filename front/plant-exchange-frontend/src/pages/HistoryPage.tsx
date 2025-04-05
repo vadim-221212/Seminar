@@ -17,7 +17,7 @@ const HistoryPage: React.FC = () => {
 
   useEffect(() => {
     // Загрузка истории обменов из API
-    axios.get('http://localhost:4006/api/history') // Убедитесь, что URL правильный
+    axios.get(`${import.meta.env.VITE_API_URL}/api/history`) // Убедитесь, что URL правильный
       .then(response => setHistory(response.data))
       .catch(error => console.error('Ошибка при загрузке истории обменов:', error));
   }, []);

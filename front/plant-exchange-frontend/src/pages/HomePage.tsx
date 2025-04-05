@@ -7,6 +7,7 @@ import ExchangeModal from '../components/ExchangeModal';
 import axios from 'axios';
 import './HomePage.scss';
 
+
 interface Plant {
   id: string;
   name: string;
@@ -31,7 +32,7 @@ const HomePage: React.FC = () => {
     }
 
     axios
-      .get('http://localhost:4006/api/plants')
+      .get(`${import.meta.env.VITE_API_URL}/api/plants`)
       .then(response => setPlants(response.data))
       .catch(error => console.error('Ошибка при загрузке растений:', error));
   }, []);
@@ -39,7 +40,7 @@ const HomePage: React.FC = () => {
   const handleAddPlant = async (newPlant: Omit<Plant, 'id'>) => {
     try {
       const token = localStorage.getItem('token'); 
-      const response = await axios.post('http://localhost:4006/api/plants', newPlant, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/plants`, newPlant, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPlants([...plants, response.data]);
@@ -61,8 +62,7 @@ const HomePage: React.FC = () => {
   const handleExchangeSubmit = async (selectedUserId: string) => {
     try {
       const token = localStorage.getItem('token'); // Получаем токен из localStorage
-      const response = await axios.post(
-        'http://localhost:4006/api/exchanges',
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/exchanges`,
         {
           plantId: exchangePlantId,
           toUserId: selectedUserId,

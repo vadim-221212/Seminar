@@ -17,7 +17,7 @@ const PlantPage: React.FC = () => {
   const [plant, setPlant] = useState<Plant | null>(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:4006/api/plants/${id}`)
+    axios.get(`${import.meta.env.VITE_API_URL}/api/plants/${id}`)
       .then(response => setPlant(response.data))
       .catch(error => console.error('Ошибка при загрузке растения:', error));
   }, [id]);
