@@ -1,0 +1,42 @@
+.plant-page {
+    padding: 40px 0;
+  
+    .plant-details {
+      display: flex;
+      gap: 40px;
+      background-color: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  
+    .plant-image {
+      flex: 1;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+    }
+  
+    .plant-info {
+      flex: 1;
+  
+      h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+  
+      small {
+        display: block;
+        color: #888;
+        font-size: 14px;
+      }
+    }
+  }

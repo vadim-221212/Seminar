@@ -1,0 +1,57 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+  
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+  
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+  
+      button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }

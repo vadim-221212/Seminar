@@ -1,0 +1,40 @@
+.plant-card {
+  background-color: #f5f5f5; /* Светлый фон */
+  border-radius: 12px; /* Закругленные углы */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+  padding: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  width: 250px;
+  text-align: center;
+  color: black;
+  overflow: hidden; /* Скрываем всё, что выходит за пределы карточки */
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 100%; /* Занимает всю ширину карточки */
+    height: 200px; /* Фиксированная высота */
+    object-fit: cover; /* Сохраняет пропорции и обрезает изображение */
+    border-radius: 8px; /* Закругленные углы */
+    margin-bottom: 12px; /* Отступ снизу */
+  }
+
+  .plant-info {
+    padding: 10px 0;
+    color: black;
+  }
+
+  .plant-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .plant-owner {
+    font-size: 14px;
+    color: #000000;
+  }
+}

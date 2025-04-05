@@ -1,0 +1,50 @@
+// Цвета
+$primary-color: #4CAF50;
+$accent-color: #FFC107;
+$background-color: #F1F8E9;
+$text-color: #2E7D32;
+$white: #FFFFFF;
+
+// Глобальные стили
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  background-color: $primary-color;
+  color: $white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

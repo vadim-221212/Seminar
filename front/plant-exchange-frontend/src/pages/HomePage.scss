@@ -1,0 +1,59 @@
+.home-page {
+    min-height: 100vh;
+    background: url('https://windowscustomization.com/wp-content/uploads/2018/12/Rain.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  
+    .hero-section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5); // Затемнение для лучшей читаемости текста
+    }
+  
+    .hero-content {
+      max-width: 800px;
+      padding: 20px;
+  
+      h1 {
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+  
+      button {
+        padding: 15px 30px;
+        background-color: #000000;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: darken(#2e2e2e, 10%);
+        }
+      }
+    }
+  
+    .container {
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.1); // Полупрозрачный фон для карточек
+      
+    }
+  
+    .plants-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+  }

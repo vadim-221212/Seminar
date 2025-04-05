@@ -1,0 +1,67 @@
+.exchange-page {
+  min-height: 100vh;
+  background: url('https://www.icegif.com/wp-content/uploads/2024/01/icegif-556.gif') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+
+  .hero-section {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-content {
+    max-width: 800px;
+    padding: 20px;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .container {
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    button {
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+
+      &.active {
+        background-color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+
+  .exchanges-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+}

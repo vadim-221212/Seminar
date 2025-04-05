@@ -1,0 +1,23 @@
+.exchange-card {
+  background: rgba(255, 255, 255, 0.2); // Полупрозрачный фон
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px); // Размытие фона
+  border: 1px solid rgba(255, 255, 255, 0.3); // Легкая граница
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+}
