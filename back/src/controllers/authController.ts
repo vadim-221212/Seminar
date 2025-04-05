@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { createUser, findUserByEmail, getUserById } from '../models/user';
 
-const JWT_SECRET = process.env.JWT_SECRET || '123321'; // Заменить на .env
+const JWT_SECRET = process.env.JWT_SECRET || 'default_secret'; // Заменить на .env
 
 export const register = async (req: Request, res: Response): Promise<void> => {
   try {
