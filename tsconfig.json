@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-     "jsx": "react-jsx",
     "target": "ES6",
     "module": "commonjs",
     "strict": true,
@@ -8,9 +7,9 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "typeRoots": ["./node_modules/@types", "./src/global.d.ts"],
-    "types": ["node", "cors"],
-
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["node"]
+    
     /* Projects */
     // "incremental": true,                              /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
     // "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */
