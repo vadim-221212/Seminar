@@ -1,26 +1,21 @@
 import { Pool } from 'pg';
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  user: 'postgres.mvhwdcbxqgflenmxrkza',
+  host: 'aws-0-eu-central-1.pooler.supabase.com',
+  database: 'postgres',
+  password: process.env.DB_PASSWORD,
+  port: 6543,
   ssl: {
     rejectUnauthorized: false
   },
   // Решаем проблему SASL:
   connectionTimeoutMillis: 5000,
-  idleTimeoutMillis: 30000,
+  application_name: 'seminar-app',
   // Явно указываем метод аутентификации:
-  user: 'postgres.mvhwdcbxqgflenmxrkza', // Ваш пользователь из строки подключения
-  password: process.env.DB_PASSWORD, // Вынесите пароль отдельно
-  host: 'aws-0-eu-central-1.pooler.supabase.com',
-  port: 6543,
-  database: 'postgres',
-  // Важно:
-  application_name: 'seminar-app'
+  types: {
+    getTypeParser: () => text => text
+  }
 });
-
-// Проверка подключения
-pool.query('SELECT NOW()')
-  .then(() => console.log('✅ PostgreSQL connected'))
-  .catch(err => console.error('❌ PostgreSQL error:', err));
 
 export default pool;
