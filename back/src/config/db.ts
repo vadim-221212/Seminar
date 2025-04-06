@@ -1,11 +1,16 @@
+// config/db.ts
 import { Pool } from 'pg';
 
 const pool = new Pool({
-  user: 'postgres', // Замените на ваше имя пользователя PostgreSQL
-  host: 'localhost',
-  database: 'template1',
-  password: '123321qewrtu', // Замените на ваш пароль
-  port: 5432,
+  connectionString: process.env.DATABASE_URL, // Берём из переменных окружения
+  ssl: {
+    rejectUnauthorized: false // Обязательно для Supabase
+  }
 });
+
+// Проверка подключения при старте
+pool.query('SELECT NOW()')
+  .then(() => console.log('✅ PostgreSQL connected'))
+  .catch((err) => console.error('❌ PostgreSQL connection error', err));
 
 export default pool;
