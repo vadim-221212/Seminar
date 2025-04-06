@@ -9,7 +9,7 @@
     "build": "tsc",
     "serve": "npm run build && npm run start",
     "vercel-build": "npm install && tsc",
-    "dev": "nodemon src/server.ts",
+    "dev": "nodemon src/server.ts"
   },
   "keywords": [],
   "author": "",
