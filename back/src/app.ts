@@ -1,6 +1,5 @@
 // src/app.ts
 import express from 'express';
-import cors from 'cors';
 import plantsRouter from './routes/plants';
 import exchangesRouter from './routes/exchange';
 import historyRouter from './routes/history';
@@ -14,8 +13,6 @@ dotenv.config();
 // Middleware для парсинга JSON
 app.use(express.json());
 
-// Middleware для CORS
-app.use(cors());
 
 // Подключение роутеров
 console.log("Plants router loaded");
