@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npm install --save-dev @types/cors",
+    "prestart": "npm install && npm install --save-dev @types/cors",
     "start": "ts-node src/server.ts",
     "build": "tsc",
     "serve": "npm run build && npm run start",
     "vercel-build": "npm install && tsc",
     "dev": "nodemon src/server.ts",
-    "prestart": "npm install && npm install --save-dev @types/cors"
   },
   "keywords": [],
   "author": "",
@@ -20,8 +21,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "react": "^19.1.0",
-    "@types/cors": "^2.8.13"
+    "react": "^19.1.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
