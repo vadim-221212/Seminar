@@ -2,7 +2,6 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import morgan from 'morgan';
 import rateLimit from 'express-rate-limit';
 import plantsRouter from './routes/plants';
 import exchangesRouter from './routes/exchange';
@@ -23,8 +22,6 @@ app.use(cors({
   credentials: true
 }));
 
-// ===== Логирование =====
-app.use(morgan('dev'));
 
 // ===== Лимит запросов =====
 const limiter = rateLimit({
