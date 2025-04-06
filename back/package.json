@@ -6,7 +6,7 @@
     "start": "ts-node src/server.ts",
     "build": "tsc",
     "serve": "npm run build && npm run start",
-    "vercel-build": "npm install && tsc",  
+    "vercel-build": "npm install && tsc",
     "dev": "nodemon src/server.ts"
   },
   "keywords": [],
