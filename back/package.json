@@ -20,7 +20,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "react": "^19.1.0"
+    "react": "^19.1.0",
+    "@types/cors": "^2.8.13"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
