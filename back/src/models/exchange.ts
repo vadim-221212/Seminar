@@ -1,5 +1,5 @@
 // src/models/exchange.ts
-import pool from '../config/db';
+import {pool} from '../config/db';
 
 export interface Exchange {
   id: string;

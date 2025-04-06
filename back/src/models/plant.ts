@@ -1,5 +1,5 @@
 // src/models/plant.ts
-import pool from '../config/db';
+import {pool} from '../config/db';
 
 export interface Plant {
   id: number;
